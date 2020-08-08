@@ -24,7 +24,6 @@ original_ip = get_ip(domain)
 print "Watching %s, currently %s" % (domain, original_ip)
 
 while True:
-  os.system('dscacheutil -flushcache')  
   now_ip = get_ip(domain)
   if now_ip != original_ip:
     os.system('say -v zarvox "The DNS has changed!"')
